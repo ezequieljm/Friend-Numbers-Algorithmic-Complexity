@@ -19,9 +19,10 @@ def sum_dividers_of(num):
 
 @execution_time.execution_time
 def divs_range(limit):
-    for x in range(1, limit, 2):
-        print(f"{x}: {sum_dividers_of(x)}")
+    for x in range(1, limit):
+        #print(f"{x}: {sum_dividers_of(x)}")
         #sum_dividers_of(x)
+        dividers_of(x)
 
 
 
