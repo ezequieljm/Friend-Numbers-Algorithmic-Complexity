@@ -1,16 +1,19 @@
 from sys import argv
-from test_modules import test_of_module
+from test_modules import test_of_module, prime_factorization
 
 # The main function entry point
 def main(*args, **kwargs):
-    test_of_module.divs_range(100000)
-    #primes = test_of_module.get_lazy_prime()
-    #test_of_module.primes_ultil(100000, primes)
+    if args[0] == 0:
+        print("Sum of dividers by normal method")
+        test_of_module.sum_dividers_by_range(args[1])
+    else:
+        print("Sum of dividers by prime factor decomposition method")
+        primes = prime_factorization.prime_seive1(args[1])
+        prime_factorization.dividers_by_factorization_in_range(args[1], primes)
 
 
-
-
+    
 
 # Control of module
 if __name__ == "__main__":
-    main()
+    main(int(argv[1]), int(argv[2]))
