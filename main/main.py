@@ -18,6 +18,8 @@ def main(*args, **kwargs):
     #     # prime_factorization.dividers_by_factorization_in_range(primes, compose)
 
     prime_factorization.friend_numbers(args[0])
+    #(p,c) = prime_factorization.prime_seive0(args[0])
+    #print(prime_factorization.dividers_by_factorization_in_range(p,c))
 
 
     
