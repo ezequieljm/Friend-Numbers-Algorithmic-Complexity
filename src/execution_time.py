@@ -6,5 +6,6 @@ def execution_time(fn):
         result = fn(*args, **kwargs)
         after = perf_counter() - before
         print(f"""\nExecution Time\nSeconds: {after}\nMinutes: {after / 60}\n""")
+        #return (result, after)
         return result
     return wrapper
